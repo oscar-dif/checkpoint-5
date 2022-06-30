@@ -15,10 +15,10 @@ def read_phone(C, name):
     rows = cur.fetchall()
     cur.close()
     return rows
-def read_name(C, name):
+def read_name(C, phone):
     cur = C.cursor()
-    print(f"SELECT name FROM phonelist WHERE name = '{name}';")
-    cur.execute(f"SELECT name FROM phonelist WHERE name = '{name}';")
+    print(f"SELECT name FROM phonelist WHERE phone = '{phone}';")
+    cur.execute(f"SELECT name FROM phonelist WHERE phone = '{phone}';")
     rows = cur.fetchall()
     cur.close()
     return rows
